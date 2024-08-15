@@ -1,0 +1,33 @@
+<div class="bg-slate-700 text-slate-300 mx-10 my-2 pt-1 pb-5 px-5 rounded-md items-center">
+    <div class="font-bold text-4xl my-2">About</div>
+    <div class="flex mb-5 text-slate-300">
+        <app-about></app-about>
+    </div>
+
+    <a class="bg-slate-400 text-slate-900 rounded-md p-2 hover:bg-slate-200" href= {{resume}} download="resume" target="_blank">
+        <button type="button">View Full Résumé</button>
+    </a>
+</div>
+
+<div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl items-center">
+    <div class="font-bold text-4xl my-2">Experience</div>
+    <div *ngFor="let item of Jobs">
+        <app-experience [job]="item"></app-experience>
+    </div>
+</div>
+
+<div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl items-center">
+    <div class="font-bold text-4xl my-2">Education</div>
+    <div *ngFor="let item of Schools">
+        <app-education [school]="item"></app-education>
+    </div>
+</div>
+
+<div class="bg-slate-700 text-slate-300 mx-10 mt-2 mb-5 py-2 px-5 rounded-md items-center">
+    <div class="font-bold text-4xl my-2">Certification</div>
+    <div *ngFor="let item of Certificates">
+        <app-certification [certificate]="item"></app-certification>
+    </div>
+</div>
+
+<!-- <app-footer></app-footer> -->

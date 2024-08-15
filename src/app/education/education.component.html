@@ -1,0 +1,12 @@
+<div class="pl-3 pt-1 pb-2">
+    <div class="leading-tight">
+
+        <div class="font-bold">{{school.courseName}}</div>
+        {{school.date}} / {{school.SchoolName}}
+
+        <ul *ngFor="let item of school.notes">
+            <li class="list-disc ml-6">{{item}}</li>
+        </ul>
+
+    </div>
+</div>

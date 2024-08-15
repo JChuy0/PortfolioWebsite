@@ -1,0 +1,18 @@
+<div class="pl-3 pt-1">
+    <div class="leading-tight">
+
+        <div class="font-bold">{{job.jobTitle}}</div>
+        {{job.companyName}} / {{job.date}}
+
+        <ul class="list-disc ml-6" *ngFor="let item of job.accomplishments">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+
+    <div class="flex items-center">
+        <div *ngFor="let tag of job.tags">
+            <div class="my-2 mx-0.5 px-5 h-7 w-fit size-3 rounded-lg text-white" [style.background-color] = "tag.color">{{tag}}</div>
+        </div>
+    </div>
+
+</div>

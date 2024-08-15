@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card-body">
+
+        <h5 class="card-title">{{project.name}}</h5>
+
+        <div class="gallery">
+            <div *ngFor="let picture of project.pictures">
+                <a target="_blank" href={{picture}}>
+                <img src={{picture}} alt={{project.name}} width="600" height="400">
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <p class="card-text">{{project.description}}</p>
+        </div>
+
+        <p><a href={{project.projectLink}} target="_blank">GitHub Link</a></p>
+    </div>
+
+    <div class="card-footer">
+        <div *ngFor="let tag of project.tags">
+            <div class="tag" [style.background-color] = "tag.color">{{tag}}</div>
+        </div>
+    </div>
+</div>
