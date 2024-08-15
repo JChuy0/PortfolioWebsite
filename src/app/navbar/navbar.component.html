@@ -1,31 +1,23 @@
-<div class="bg-white flex justify-between mx-20 px-5 my-2 rounded-md items-center">
-    <p class="inline-block my-2 py-2">name here</p>
-    <ul class="flex justify-between">
-        <li class="">
-            <a class="inline-block my-2 mx-1 py-1 px-2 border-b-4 border-blue-500 rounded hover:bg-blue-500" routerLink="/about" routerLinkActive="text-dark" >About</a>
-        </li>
-        <span class="text-2xl inline-block py-2 px-2 text-slate-400 font-thin">/</span>
-
-        <li class="">
-            <a class="inline-block my-2 mx-1 py-1 px-2 hover:bg-blue-500 rounded" routerLink="/portfolio" routerLinkActive="text-dark">Portfolio</a>
-        </li>
-        <span class="text-2xl inline-block py-2 px-2 text-slate-400 font-thin">/</span>
-
-        <li class="">
-            <a class="inline-block my-1 mx-1 py-2 px-2 border-2 border-gray-950 rounded-md hover:bg-green-500" href="mailto:youremail@example.com">
+<div class="flex flex-col h-screen rounded-md sticky top-0 justify-between ml-6">
+    <div class="flex flex-col bg-slate-800 text-slate-300 mr-12 ml-10 px-5 rounded-md sticky top-0">
+        <p class="mt-2 pt-2">name here</p>
+        <p class="mb-2 pb-2">title here</p>
+    
+        <div class="flex flex-col items-start">
+            <a class="my-1 mx-1 px-2 hover:bg-yellow-300 hover:text-slate-900 rounded" routerLink="/about" routerLinkActive="text-dark" >About</a>
+            <a class="my-1 mx-1 px-2 hover:bg-yellow-300 hover:text-slate-900 rounded" routerLink="/portfolio" routerLinkActive="text-dark">Portfolio</a>
+            <a class="my-1 mx-1 px-2 py-1 bg-slate-500 text-slate-50 border-2 border-gray-950 rounded-md hover:bg-green-500 hover:text-slate-900" href="mailto:youremail@example.com">
                 <button type="button">Contact Me</button>
             </a>
-        </li>
-
-        <li class="">
-            <a class="inline-block py-2 ml-2" href="//linkedin.com" target="_blank">
+        </div>
+    
+        <div class="my-2">
+            <a class="inline-block ml-2 hover:bg-slate-600 p-1 rounded-xl" href="//linkedin.com" target="_blank">
                 <img src="../../assets/linkedin_icon.png" width="32" height="32" alt="linkedin_icon">
             </a>
-        </li>
-        <li class="">
-            <a class="inline-block py-2 pl-1" href="//github.com" target="_blank">
+            <a class="inline-block hover:bg-slate-600 p-1 rounded-xl" href="//github.com" target="_blank">
                 <img src="../../assets/github_icon.png" width="32" height="32" alt="github_icon">
             </a>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>
