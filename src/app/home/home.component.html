@@ -1,6 +1,8 @@
-<div class="bg-slate-700 text-slate-300 mx-10 my-2 pt-1 pb-5 px-5 rounded-md items-center">
-    <div class="font-bold text-4xl my-2">About</div>
-    <div class="flex mb-5 text-slate-300">
+<!-- About me component -->
+<div class="font-bold text-slate-400 text-4xl py-5">About</div>
+<div class="bg-slate-700 text-slate-300 mx-10 my-2 pt-1 pb-5 px-5 rounded-md">
+
+    <div class="flex mb-5 text-slate-300 indent-8">
         <app-about></app-about>
     </div>
 
@@ -9,25 +11,32 @@
     </a>
 </div>
 
-<div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl items-center">
-    <div class="font-bold text-4xl my-2">Experience</div>
+<!-- Work experience component -->
+<div class="font-bold text-slate-400 text-4xl py-5">Experience</div>
+<div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl">
     <div *ngFor="let item of Jobs">
         <app-experience [job]="item"></app-experience>
     </div>
 </div>
 
-<div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl items-center">
-    <div class="font-bold text-4xl my-2">Education</div>
+<!-- Education component -->
+<div class="font-bold text-slate-400 text-4xl py-5">Education</div>
+<div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl">
     <div *ngFor="let item of Schools">
         <app-education [school]="item"></app-education>
     </div>
 </div>
 
-<div class="bg-slate-700 text-slate-300 mx-10 mt-2 mb-5 py-2 px-5 rounded-md items-center">
-    <div class="font-bold text-4xl my-2">Certification</div>
+<!-- Certification component -->
+<div class="font-bold text-slate-400 text-4xl py-5">Certifications</div>
+<div class="bg-slate-700 text-slate-300 mx-10 mt-2 mb-5 py-2 px-5 rounded-md">
     <div *ngFor="let item of Certificates">
         <app-certification [certificate]="item"></app-certification>
     </div>
 </div>
 
-<!-- <app-footer></app-footer> -->
+<div class="mt-10 mb-5 flex justify-end mr-10">
+    <p class="text-slate-600">
+        This website was loosely designed in <a class="text-slate-400" href="https://www.figma.com/">Figma</a> and developed in <a class="text-slate-400" href="https://code.visualstudio.com/">Visual Studio Code</a> using <a class="text-slate-400" href="https://angular.dev/">Angular</a>, and <a class="text-slate-400" href="https://tailwindcss.com/">Tailwind CSS</a>.
+    </p>
+</div>

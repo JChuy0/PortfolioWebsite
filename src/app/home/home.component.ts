@@ -18,7 +18,7 @@ export class HomeComponent {
   ]
 
   Schools: School[] = [
-    { id: 0, SchoolName: 'Red River College Polytechnic', courseName: 'Business Information Technology', date: 'September 2020 - December 2022', notes: ['Diploma in Business Information Technology, graduating on the honor roll with a 4.17 GPA.'] },
+    { id: 0, SchoolName: 'Red River College Polytechnic', courseName: 'Business Information Technology', date: 'December 2022', notes: ['Diploma in Business Information Technology, graduated on the honor roll with a 4.17 GPA.'] },
   ]
 
   Certificates: Certificate[] = [
