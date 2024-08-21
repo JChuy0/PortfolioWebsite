@@ -1,8 +1,8 @@
 <!-- About me component -->
-<div class="font-bold text-slate-400 text-4xl py-5">About</div>
+<div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">About</div>
 <div class="bg-slate-700 text-slate-300 mx-10 my-2 pt-1 pb-5 px-5 rounded-md">
 
-    <div class="flex mb-5 text-slate-300 indent-8">
+    <div class="flex mb-5 mt-1 text-slate-300 indent-8">
         <app-about></app-about>
     </div>
 
@@ -12,7 +12,7 @@
 </div>
 
 <!-- Work experience component -->
-<div class="font-bold text-slate-400 text-4xl py-5">Experience</div>
+<div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Experience</div>
 <div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl">
     <div *ngFor="let item of Jobs">
         <app-experience [job]="item"></app-experience>
@@ -20,7 +20,7 @@
 </div>
 
 <!-- Education component -->
-<div class="font-bold text-slate-400 text-4xl py-5">Education</div>
+<div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Education</div>
 <div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl">
     <div *ngFor="let item of Schools">
         <app-education [school]="item"></app-education>
@@ -28,14 +28,14 @@
 </div>
 
 <!-- Certification component -->
-<div class="font-bold text-slate-400 text-4xl py-5">Certifications</div>
+<div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Certifications</div>
 <div class="bg-slate-700 text-slate-300 mx-10 mt-2 mb-5 py-2 px-5 rounded-md">
     <div *ngFor="let item of Certificates">
         <app-certification [certificate]="item"></app-certification>
     </div>
 </div>
 
-<div class="mt-10 mb-5 flex justify-end mr-10">
+<div class="mt-10 mb-5 flex justify-end mr-10 ml-4 md:ml-0">
     <p class="text-slate-600">
         This website was loosely designed in <a class="text-slate-400" href="https://www.figma.com/">Figma</a> and developed in <a class="text-slate-400" href="https://code.visualstudio.com/">Visual Studio Code</a> using <a class="text-slate-400" href="https://angular.dev/">Angular</a>, and <a class="text-slate-400" href="https://tailwindcss.com/">Tailwind CSS</a>.
     </p>
