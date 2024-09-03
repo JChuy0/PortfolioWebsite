@@ -13,8 +13,7 @@ export class ProjectCardComponent {
 
   constructor(private router: Router) {}
 
-  navigateToDetails(num: number) {
-    this.router.navigate(['/project-details', this.project.id]);
+  navigateToDetails(name: string) {
+    this.router.navigate(['/project-details', name]);
   }
-
 }

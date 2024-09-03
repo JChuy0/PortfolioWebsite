@@ -1,15 +1,15 @@
-<a class="" routerLink="/portfolio/{{project.id}}">
+<a class="" [routerLink]="['/portfolio', project.name]" >
     <div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-md hover:bg-slate-500">
         <div class="">
             <div class="font-bold">{{project.name}}</div>
             <p class="">
-                {{project.summary}}
+                {{project.description}}
             </p>
         </div>
 
         <div class="flex items-center">
-            <div *ngFor="let tag of project.tags">
-                <div class="my-2 mx-0.5 px-5 h-7 w-fit size-3 rounded-lg text-white" [style.background-color] = "tag.color">{{tag}}</div>
+            <div class="pt-2" *ngFor="let tag of project.topics">
+                <div class="mx-0.5 px-5 h-7 w-fit size-3 rounded-lg text-white bg-slate-800">{{tag}}</div>
             </div>
         </div>
     </div>

@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Project } from '../_models/Project';
-import { ProjectsService } from '../_services/projects.service';
-import { Title } from '@angular/platform-browser';
+import { ApiService } from '../_services/api.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { marked } from 'marked';
+
 
 @Component({
   selector: 'app-project-details',
@@ -11,16 +12,33 @@ import { Title } from '@angular/platform-browser';
 
 export class ProjectDetailsComponent implements OnInit {
 
-  @Input() projectid: string = '';
-  project = {} as Project;
+  private sub: any;
+  project_name: any;
+  data: any;
+  marked_readme: any;
+  error: string | null = null;
 
-  constructor(private titleService: Title, private projectService: ProjectsService) {
-    this.titleService.setTitle('Project title here');
-  }
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router,) {}
 
-  ngOnInit(): void {
-    let id = +this.projectid;
-    this.project = this.projectService.GetProjectById(id);
+  async ngOnInit() {
+    // grab project name from url params
+    this.sub = this.route.params.subscribe(params => {
+      this.project_name = params['name'];
+    })
+
+    try {
+      this.data = await this.apiService.getSingleRepo(this.project_name);
+
+      // converts markdown syntax to html
+      this.marked_readme = await marked(this.data?.project_readme);
+
+      if (Object.keys(this.data).length === 0) {
+        this.router.navigate(['/404-page-not-found']);
+      }
+
+    } catch (err) {
+      this.error = 'Failed to load data.';
+    }
   }
 
 }

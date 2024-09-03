@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {path: 'about', component: HomeComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'portfolio/:projectid', component: ProjectDetailsComponent},
+  {path: '', title: 'this is my home page', component: HomeComponent},
+  {path: 'about', title: 'this is my home page', component: HomeComponent},
+  {path: 'portfolio/:name', component: ProjectDetailsComponent},
   {path: 'portfolio', component: PortfolioComponent},
-  {path: '**', component: HomeComponent, pathMatch: 'full'}
+  {path: '404-page-not-found', component: PageNotFoundComponent},
+  {path: '**', component: PageNotFoundComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

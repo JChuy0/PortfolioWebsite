@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Project } from '../_models/Project';
-import { ProjectsService } from '../_services/projects.service';
-import { Title } from '@angular/platform-browser';
+import { Component, inject, OnInit } from '@angular/core';
+import { ApiService } from '../_services/api.service';
 
 
 @Component({
@@ -11,13 +9,18 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class PortfolioComponent implements OnInit {
-  projects = {} as Project[];
 
-  constructor(private titleService: Title, private projectService: ProjectsService) {
-    this.titleService.setTitle('Project title here');
+  constructor(private apiService: ApiService) {}
+
+  data: any;
+  error: string | null = null;
+
+  async ngOnInit() {
+    try {
+      this.data = await this.apiService.getAllRepos();
+    } catch (err) {
+      this.error = 'Failed to load data.';
+    }
   }
 
-  ngOnInit(): void {
-    this.projects = this.projectService.GetProjects();
-  }
 }
