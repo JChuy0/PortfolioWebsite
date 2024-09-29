@@ -7,16 +7,7 @@
 
 <div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-md items-center">
 
-    <!-- <div class="flex justify-start flex-wrap">
-        <div class="m-1 max-w-sm" *ngFor="let picture of project.pictures">
-            <a class="" target="_blank" href={{picture}}>
-                <img class="border-solid border-2" src={{picture}} alt={{project.name}}>
-            </a>
-        </div>
-    </div> -->
-
-    <div class="mt-3" [innerHTML]="marked_readme"></div>
-
+    <div class="mt-3 indent-8 whitespace-break-spaces" [innerHTML]="marked_readme"></div>
 
     <button class="mt-2 py-1 px-3 bg-slate-800 rounded-md hover:bg-slate-950" type="button">
         <a href={{data?.project_repo?.html_url}} target="_blank">GitHub Link</a>

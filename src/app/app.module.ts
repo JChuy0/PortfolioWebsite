@@ -26,7 +26,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ProjectCardComponent,
     ProjectDetailsComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
