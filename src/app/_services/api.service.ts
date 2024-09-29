@@ -39,6 +39,8 @@ export class ApiService {
     } catch (err) {
       console.error(err);
     }
+
+    return projects;
   }
 
   // returns project repo and readme
