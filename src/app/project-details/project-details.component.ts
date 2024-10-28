@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../_services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { marked } from 'marked';
 
 
 @Component({
@@ -15,7 +14,7 @@ export class ProjectDetailsComponent implements OnInit {
   private sub: any;
   project_name: any;
   data: any;
-  marked_readme: any;
+  project_description: any;
   error: string | null = null;
 
   constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router,) {}
@@ -27,10 +26,7 @@ export class ProjectDetailsComponent implements OnInit {
     })
 
     try {
-      this.data = await this.apiService.getSingleRepo(this.project_name);
-
-      // converts markdown syntax to html
-      this.marked_readme = await marked(this.data?.project_readme);
+      this.data = await this.apiService.getSingleGitHubRepo(this.project_name);
 
       if (Object.keys(this.data).length === 0) {
         this.router.navigate(['/404-page-not-found']);

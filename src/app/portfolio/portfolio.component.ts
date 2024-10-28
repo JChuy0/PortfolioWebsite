@@ -17,7 +17,7 @@ export class PortfolioComponent implements OnInit {
 
   async ngOnInit() {
     try {
-      this.data = await this.apiService.getAllRepos();
+      this.data = await this.apiService.getAllGitHubRepos();
     } catch (err) {
       this.error = 'Failed to load data.';
     }
