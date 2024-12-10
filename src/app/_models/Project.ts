@@ -1,4 +1,3 @@
-import { Tag } from "./Tag";
 
 export interface Project {
     id: number;
@@ -7,5 +6,5 @@ export interface Project {
     description: string;
     projectLink: string;
     pictures: string[];
-    topics: Tag[];
+    topics: string[];
 }

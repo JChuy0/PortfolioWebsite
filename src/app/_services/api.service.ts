@@ -72,8 +72,12 @@ export class ApiService {
         if (!project_url_response.ok) {
           throw new Error(`Response status: ${project_url_response.status}, Status Text: ${project_url_response.statusText}, project '${project_name}' does not exist`);
         } else {
-          // decodes a base64 string
-          let description = atob(description_json.content);
+
+          let description = "";
+
+          if (description_json.content != undefined) {
+            description = atob(description_json.content);
+          }
 
           project['project_repo'] = project_json;
           project['project_description'] = description;

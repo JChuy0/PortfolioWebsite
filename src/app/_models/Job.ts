@@ -1,4 +1,3 @@
-import { Tag } from "./Tag";
 
 export interface Job {
     id: number;
@@ -6,5 +5,4 @@ export interface Job {
     companyName: string;
     date: string;
     accomplishments: string[];
-    tags: Tag[];
 }

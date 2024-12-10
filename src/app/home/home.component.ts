@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Job } from '../_models/Job';
-import { Tag } from '../_models/Tag';
 import { School } from '../_models/School';
 import { Certificate } from '../_models/Certificate';
 
@@ -12,19 +11,32 @@ import { Certificate } from '../_models/Certificate';
 export class HomeComponent {
 
   Jobs: Job[] = [
-    { id: 0, companyName: "companyname1", jobTitle: "mytitle", date: "Jan 2023 - April 2024", accomplishments: ['task1', 'task2', 'task3'], tags: [Tag.ANGULAR, Tag.TYPESCRIPT] },
-    { id: 1, companyName: "companyname2", jobTitle: "mytitle", date: "April 2021 - Nov 2022", accomplishments: ['task1'], tags: [Tag.ANGULAR, Tag.TYPESCRIPT] },
-    { id: 2, companyName: "companyname3", jobTitle: "mytitle", date: "Feb 2015 - April 2021", accomplishments: ['task1', 'task2'], tags: [Tag.ANGULAR, Tag.TYPESCRIPT] },
+    { id: 0, companyName: "JAM Digital Solutions", jobTitle: "Jr. Software Developer", date: "August 2023 - January 2024",
+      accomplishments: [
+        'Developed RESTful APIs for mobile apps using JavaScript, node.js, Express, and PostgreSQL.',
+        'Researched and implemented secure payment services, leading to enhanced financial security, improved customer trust, and reducing the risk of payment related issues.',
+        'Built complex database models and effective queries, resulting in quicker data retrieval times.',
+        'Applied the proper version control, prompting efficient workflow, and dedication to best practices in software development.'
+      ]
+    },
+    { id: 1, companyName: "ACE Project Space", jobTitle: "Full Stack Developer Intern", date: "January 2022 - April 2022",
+      accomplishments: [
+        'Utilized React.js for front-end and Node.js for back-end development work, which involved retrieving data from an API, filtering and uploading the data to MongoDB, then displaying it in a user-friendly webpage where the user can edit the data.',
+        'Increased speed of daily updates by over 30% using node.js, saving a lot of time and leading to high client satisfaction.',
+        'Offer leadership support by applying agile methodologies to organize tasks using a Kanban board.',
+      ]
+    },
   ]
 
   Schools: School[] = [
-    { id: 0, SchoolName: 'Red River College Polytechnic', courseName: 'Business Information Technology', date: 'December 2022', notes: ['Diploma in Business Information Technology, graduated on the honor roll with a 4.17 GPA.'] },
+    { id: 0, SchoolName: 'Red River College Polytechnic', courseName: 'Business Information Technology',
+      notes: ['Diploma in Business Information Technology, graduated on the honor roll with a 4.17 GPA.'] },
   ]
 
   Certificates: Certificate[] = [
     { id: 0, name: 'Certified Cloud Practitioner', provider: 'Amazon Web Services (AWS)', date: 'July 2024' },
   ]
 
-  resume = 'https://drive.google.com/file/d/1bwJIP9C4xQU6iA6ksVubfN2k9bCDVxBY/view?usp=sharing'
+  resume = 'https://drive.google.com/file/d/1gnWnlsJ6OBmTCgj8aA4Zt3aftcY7e8sL/view?usp=sharing'
 
 }

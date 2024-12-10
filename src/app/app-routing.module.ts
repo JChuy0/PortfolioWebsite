@@ -6,12 +6,12 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {path: '', title: 'this is my home page', component: HomeComponent},
-  {path: 'about', title: 'this is my home page', component: HomeComponent},
-  {path: 'portfolio/:name', component: ProjectDetailsComponent},
-  {path: 'portfolio', component: PortfolioComponent},
-  {path: '404-page-not-found', component: PageNotFoundComponent},
-  {path: '**', component: PageNotFoundComponent, pathMatch: 'full'}
+  {path: '', title: 'Home', component: HomeComponent},
+  {path: 'about', title: 'Home', component: HomeComponent},
+  {path: 'portfolio/:name', title: '', component: ProjectDetailsComponent},
+  {path: 'portfolio', title: 'Portfolio', component: PortfolioComponent},
+  {path: '404-page-not-found', title: 'Page not found', component: PageNotFoundComponent},
+  {path: '**', title: 'Page not found', component: PageNotFoundComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

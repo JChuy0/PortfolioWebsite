@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../_services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -17,12 +18,13 @@ export class ProjectDetailsComponent implements OnInit {
   project_description: any;
   error: string | null = null;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router,) {}
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router, private titleService: Title) {}
 
   async ngOnInit() {
     // grab project name from url params
     this.sub = this.route.params.subscribe(params => {
       this.project_name = params['name'];
+      this.titleService.setTitle("Portfolio - " + this.project_name);
     })
 
     try {
