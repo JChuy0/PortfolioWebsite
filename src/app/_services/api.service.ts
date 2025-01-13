@@ -79,8 +79,23 @@ export class ApiService {
             description = atob(description_json.content);
           }
 
+          let images = [];
+
+          // Retrieves all images for a project
+          if (repo_name.toLowerCase() != "portfoliowebsite") {
+            const project_images = `https://api.github.com/repos/jchuy0/${project_name}/contents/images`;
+            const project_image_response = await fetch(project_images);
+
+            if(project_image_response.ok) {
+              const images_json = await project_image_response.json();
+              images = images_json;
+            }
+
+          }
+
           project['project_repo'] = project_json;
           project['project_description'] = description;
+          project['images'] = images;
         }
 
       }
