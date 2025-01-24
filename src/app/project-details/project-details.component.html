@@ -1,6 +1,6 @@
 <!-- Displays title and tags for a project -->
 <div class="font-bold text-slate-400 text-4xl pt-5 ml-4 md:ml-0">{{data?.project_repo?.name}}</div>
-<div class="flex items-center ml-10">
+<div class="flex items-center flex-wrap ml-10">
     <div class="" *ngFor="let tag of data?.project_repo?.topics">
         <div class="my-2 mx-0.5 px-5 h-7 w-fit size-3 rounded-lg text-white bg-slate-700">{{tag}}</div>
     </div>
