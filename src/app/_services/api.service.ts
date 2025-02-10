@@ -66,6 +66,7 @@ export class ApiService {
         // get project repository and description
         const project_url_response = await fetch(project_url);
         const project_description_response = await fetch(project_description);
+        
         const project_json = await project_url_response.json();
         const description_json = await project_description_response.json();
         
@@ -82,15 +83,12 @@ export class ApiService {
           let images = [];
 
           // Retrieves all images for a project
-          if (repo_name.toLowerCase() != "portfoliowebsite") {
-            const project_images = `https://api.github.com/repos/jchuy0/${project_name}/contents/images`;
-            const project_image_response = await fetch(project_images);
+          const project_images = `https://api.github.com/repos/jchuy0/${project_name}/contents/images`;
+          const project_image_response = await fetch(project_images);
 
-            if(project_image_response.ok) {
-              const images_json = await project_image_response.json();
-              images = images_json;
-            }
-
+          if(project_image_response.ok) {
+            const images_json = await project_image_response.json();
+            images = images_json;
           }
 
           project['project_repo'] = project_json;
