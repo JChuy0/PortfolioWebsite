@@ -13,6 +13,9 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CreativeCornerComponent } from './creative-corner/creative-corner.component';
+import { DioramaCardComponent } from './diorama-card/diorama-card.component';
+import { DioramaDetailsComponent } from './diorama-details/diorama-details.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ProjectDetailsComponent,
     HomeComponent,
     PageNotFoundComponent,
+    CreativeCornerComponent,
+    DioramaCardComponent,
+    DioramaDetailsComponent,
   ],
   imports: [
     BrowserModule,

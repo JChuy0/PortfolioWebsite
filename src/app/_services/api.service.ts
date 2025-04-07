@@ -7,6 +7,7 @@ export class ApiService {
 
   constructor() { }
 
+  // Returns a dictionary of dictionaries, with each dictionary containing project information
   async getAllGitHubRepos() {
     const url = "https://api.github.com/users/JChuy0/repos?";
     const searchParams = new URLSearchParams({

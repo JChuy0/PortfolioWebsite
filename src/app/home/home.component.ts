@@ -22,7 +22,7 @@ export class HomeComponent {
     { id: 1, companyName: "ACE Project Space", jobTitle: "Full Stack Developer Intern", date: "January 2022 - April 2022",
       accomplishments: [
         'Utilized React.js for front-end and Node.js for back-end development work, which involved retrieving data from an API, filtering and uploading the data to MongoDB, then displaying it in a user-friendly webpage where the user can edit the data.',
-        'Increased speed of daily updates by over 30% using node.js, saving a lot of time and leading to high client satisfaction.',
+        'Increased speed of daily updates by over 20% using node.js, saving a lot of time and leading to high client satisfaction.',
         'Offer leadership support by applying agile methodologies to organize tasks using a Kanban board.',
       ]
     },
@@ -37,6 +37,6 @@ export class HomeComponent {
     { id: 0, name: 'Certified Cloud Practitioner', provider: 'Amazon Web Services (AWS)', date: 'July 2024' },
   ]
 
-  resume = 'https://drive.google.com/file/d/1gnWnlsJ6OBmTCgj8aA4Zt3aftcY7e8sL/view?usp=sharing'
+  resume = 'https://d3p6lighdfhv6a.cloudfront.net/resume/JasonChuyResume.pdf';
 
 }
