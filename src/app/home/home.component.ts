@@ -13,7 +13,7 @@ export class HomeComponent {
   Jobs: Job[] = [
     { id: 0, companyName: "JAM Digital Solutions", jobTitle: "Jr. Software Developer", date: "August 2023 - January 2024",
       accomplishments: [
-        'Developed RESTful APIs for mobile apps using JavaScript, node.js, Express, and PostgreSQL.',
+        'Developed RESTful APIs for mobile apps using JavaScript, Node.js, Express, and PostgreSQL.',
         'Researched and implemented secure payment services, leading to enhanced financial security, improved customer trust, and reducing the risk of payment related issues.',
         'Built complex database models and effective queries, resulting in quicker data retrieval times.',
         'Applied the proper version control, prompting efficient workflow, and dedication to best practices in software development.'
