@@ -5,9 +5,10 @@ import { Title } from '@angular/platform-browser';
 
 
 @Component({
-  selector: 'app-project-details',
-  templateUrl: './project-details.component.html',
-  styleUrl: './project-details.component.css'
+    selector: 'app-project-details',
+    templateUrl: './project-details.component.html',
+    styleUrl: './project-details.component.css',
+    standalone: false
 })
 
 export class ProjectDetailsComponent implements OnInit {
@@ -18,7 +19,10 @@ export class ProjectDetailsComponent implements OnInit {
   project_description: any;
   error: string | null = null;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router, private titleService: Title) {}
+
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router,
+    private titleService: Title
+  ) {}
 
   async ngOnInit() {
     // grab project name from url params

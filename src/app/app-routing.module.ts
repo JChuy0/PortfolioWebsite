@@ -6,6 +6,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CreativeCornerComponent } from './creative-corner/creative-corner.component';
 import { DioramaDetailsComponent } from './diorama-details/diorama-details.component';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 const routes: Routes = [
   {path: '', title: 'Home', component: HomeComponent},
@@ -19,7 +20,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { bindToComponentInputs: true })],
+  imports: [RouterModule.forRoot(routes, { bindToComponentInputs: true }),
+    GalleryModule
+  ],
   exports: [RouterModule]
 })
 

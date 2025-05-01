@@ -2,8 +2,15 @@
 
 <div class="custom-line-height bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-md items-center">
 
-    <iframe [src]="sanitizedUrl" width="100%" height="600px"></iframe>
+    <!-- <iframe [src]="sanitizedUrl" width="100%" height="600px"></iframe> -->
     
+    <div 
+        *ngIf="isModalOpen" 
+        class="fixed inset-0 bg-black bg-opacity-80 z-40"
+        (click)="closeModal()">
+  </div>
+
+
     <!-- Displays all images -->
     @if(data?.photos.length > 0) {
         <div class="flex flex-col items-center border-2 border-slate-500 rounded-md p-2">
@@ -13,7 +20,9 @@
 
             <div class="flex space-x-4 mt-2 justify-center flex-wrap">
                 <div *ngFor="let image of data?.photos">
-                    <a href={{image}} target="_blank"> <img class="max-h-40 hover:bg-slate-500 p-2 rounded-md" src={{image}} /> </a>
+                    <!-- <a href={{image}} target="_blank"> -->
+                        <img (click)="openModal(1, 5)" class="max-h-40 hover:bg-slate-500 p-2 rounded-md" src={{image}} />
+                    <!-- </a> -->
                 </div>
             </div>
 

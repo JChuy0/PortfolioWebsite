@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { Image } from '@ks89/angular-modal-gallery'; // Import the correct Image type
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { CloudFrontService } from '../_services/cloudfront.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ModalGalleryConfig, ModalGalleryRef, ModalGalleryService } from '@ks89/angular-modal-gallery';
 
 
 @Component({
-  selector: 'app-diorama-details',
-  templateUrl: './diorama-details.component.html',
-  styleUrl: './diorama-details.component.css'
+    selector: 'app-diorama-details',
+    templateUrl: './diorama-details.component.html',
+    styleUrl: './diorama-details.component.css',
+    standalone: false,
+    template: `
+      <ks-carousel [id]="105" [images]="images" [config]="libConfig"></ks-carousel>
+    `
 })
 
 export class DioramaDetailsComponent implements OnInit {
@@ -19,8 +25,22 @@ export class DioramaDetailsComponent implements OnInit {
   sanitizedUrl: any;
   testFile: any;
   error: string | null = null;
+  images: Image[] = new Array<Image>();
+  
+  // = [
+  //   new Image(0, { img: 'https://d3p6lighdfhv6a.cloudfront.net/dioramas/warehouse/warehouse_001.jpg' }),
+  //   new Image(1, { img: 'https://d3p6lighdfhv6a.cloudfront.net/dioramas/warehouse/warehouse_002.jpg' }),
+  //   new Image(2, { img: 'https://d3p6lighdfhv6a.cloudfront.net/dioramas/warehouse/warehouse_003.jpg' }),
+  //   new Image(3, { img: 'https://d3p6lighdfhv6a.cloudfront.net/dioramas/warehouse/warehouse_004.jpg' }),
+  //   new Image(4, { img: 'https://d3p6lighdfhv6a.cloudfront.net/dioramas/warehouse/warehouse_005.jpg' }),
+  // ];
 
-  constructor(private route: ActivatedRoute, private cloudFront: CloudFrontService, private router: Router, private titleService: Title, private sanitizer:DomSanitizer) {}
+  isModalOpen = false;
+
+
+  constructor(private route: ActivatedRoute, private cloudFront: CloudFrontService, private router: Router,
+    private titleService: Title, private sanitizer:DomSanitizer, private modalGalleryService: ModalGalleryService
+  ) {}
 
   async ngOnInit() {
     /*
@@ -36,12 +56,40 @@ export class DioramaDetailsComponent implements OnInit {
       this.data = await this.cloudFront.getFilesForSingleDiorama(this.diorama_name);
       this.sanitizedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.data.writeup);
 
+      // console.log("my data: " + JSON.stringify(this.data.photos));
+
       if (Object.keys(this.data).length === 0) {
         this.router.navigate(['/404-page-not-found']);
+      } else {
+        this.convertImageToImageObject(this.data.photos);
       }
 
     } catch (err) {
       this.error = 'Failed to load data.';
     }
   }
+
+  convertImageToImageObject(image: any) {
+    for (let i = 0; i < image.length; i++) {
+      const imageObject = new Image(i, { img: image[i] });
+      this.images.push(imageObject);
+    }
+  }
+
+
+  openModal(id: number, imageIndex: number) {
+    const imageToShow: Image  = this.images[imageIndex];
+    const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
+      id,
+      images: this.images,
+      currentImage: imageToShow,
+    } as ModalGalleryConfig) as ModalGalleryRef;
+
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
+
 }

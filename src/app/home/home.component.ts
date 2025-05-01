@@ -4,9 +4,10 @@ import { School } from '../_models/School';
 import { Certificate } from '../_models/Certificate';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css',
+    standalone: false
 })
 export class HomeComponent {
 
