@@ -1,7 +1,9 @@
 
 export interface School {
     id: number;
-    SchoolName: string;
+    schoolName: string;
     courseName: string;
+    date: string;
     notes: string[];
+    coursesTaken: string;
 }

@@ -2,11 +2,14 @@
     <div class="custom-line-height">
 
         <div class="font-bold">{{school.courseName}}</div>
-        {{school.SchoolName}}
+        <span class="italic">{{school.schoolName}} / {{school.date}}</span>
 
         <ul *ngFor="let item of school.notes">
             <li class="list-disc ml-6">{{item}}</li>
         </ul>
+
+        <span class="font-bold">Courses Taken: </span>
+        {{school.coursesTaken}}
 
     </div>
 </div>

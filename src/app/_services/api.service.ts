@@ -32,7 +32,7 @@ export class ApiService {
         let project: Dictionary = {};
 
         // filters out certain projects
-        const excludedNames = ["jchuy0", "image_board_website"];
+        const excludedNames = ["jchuy0", "image_board_website", "mandemsite"];
 
         if (!excludedNames.includes(ele.name.toLowerCase())) {
           project["name"] = ele.name;
