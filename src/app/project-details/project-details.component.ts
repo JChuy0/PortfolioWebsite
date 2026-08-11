@@ -5,9 +5,10 @@ import { Title } from '@angular/platform-browser';
 
 
 @Component({
-  selector: 'app-project-details',
-  templateUrl: './project-details.component.html',
-  styleUrl: './project-details.component.css'
+    selector: 'app-project-details',
+    templateUrl: './project-details.component.html',
+    styleUrl: './project-details.component.css',
+    standalone: false
 })
 
 export class ProjectDetailsComponent implements OnInit {

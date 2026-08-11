@@ -6,9 +6,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
-  selector: 'app-diorama-details',
-  templateUrl: './diorama-details.component.html',
-  styleUrl: './diorama-details.component.css'
+    selector: 'app-diorama-details',
+    templateUrl: './diorama-details.component.html',
+    styleUrl: './diorama-details.component.css',
+    standalone: false
 })
 
 export class DioramaDetailsComponent implements OnInit {

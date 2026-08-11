@@ -3,9 +3,10 @@ import { Project } from '../_models/Project';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-project-card',
-  templateUrl: './project-card.component.html',
-  styleUrl: './project-card.component.css',
+    selector: 'app-project-card',
+    templateUrl: './project-card.component.html',
+    styleUrl: './project-card.component.css',
+    standalone: false
 })
 
 export class ProjectCardComponent {

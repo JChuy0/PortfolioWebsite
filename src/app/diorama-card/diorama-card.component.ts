@@ -3,9 +3,10 @@ import { Diorama } from '../_models/Diorama';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-diorama-card',
-  templateUrl: './diorama-card.component.html',
-  styleUrl: './diorama-card.component.css'
+    selector: 'app-diorama-card',
+    templateUrl: './diorama-card.component.html',
+    styleUrl: './diorama-card.component.css',
+    standalone: false
 })
 
 export class DioramaCardComponent {

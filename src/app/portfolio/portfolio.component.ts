@@ -3,9 +3,10 @@ import { ApiService } from '../_services/api.service';
 
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.css'
+    selector: 'app-portfolio',
+    templateUrl: './portfolio.component.html',
+    styleUrl: './portfolio.component.css',
+    standalone: false
 })
 
 export class PortfolioComponent implements OnInit {
