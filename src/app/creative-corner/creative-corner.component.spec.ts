@@ -8,8 +8,8 @@ describe('InterestsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CreativeCornerComponent]
-    })
+    imports: [CreativeCornerComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(CreativeCornerComponent);

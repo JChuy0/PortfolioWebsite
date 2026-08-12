@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 @Component({
     selector: 'app-diorama-card',
     templateUrl: './diorama-card.component.html',
-    styleUrl: './diorama-card.component.css',
-    standalone: false
+    styleUrl: './diorama-card.component.css'
 })
 
 export class DioramaCardComponent {

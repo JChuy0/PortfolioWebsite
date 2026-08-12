@@ -8,8 +8,8 @@ describe('DioramaCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DioramaCardComponent]
-    })
+    imports: [DioramaCardComponent]
+})
     .compileComponents();
     
     fixture = TestBed.createComponent(DioramaCardComponent);

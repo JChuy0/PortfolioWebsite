@@ -2,12 +2,17 @@ import { Component } from '@angular/core';
 import { Job } from '../_models/Job';
 import { School } from '../_models/School';
 import { Certificate } from '../_models/Certificate';
+import { AboutComponent } from '../about/about.component';
+import { NgFor } from '@angular/common';
+import { ExperienceComponent } from '../experience/experience.component';
+import { EducationComponent } from '../education/education.component';
+import { CertificationComponent } from '../certification/certification.component';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    standalone: false
+    imports: [AboutComponent, NgFor, ExperienceComponent, EducationComponent, CertificationComponent]
 })
 export class HomeComponent {
 

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CloudFrontService } from '../_services/cloudfront.service';
+import { NgFor } from '@angular/common';
+import { DioramaCardComponent } from '../diorama-card/diorama-card.component';
 
 @Component({
-  selector: 'app-creative-corner',
-  standalone: false,
-  templateUrl: './creative-corner.component.html',
-  styleUrl: './creative-corner.component.css'
+    selector: 'app-creative-corner',
+    templateUrl: './creative-corner.component.html',
+    styleUrl: './creative-corner.component.css',
+    imports: [NgFor, DioramaCardComponent]
 })
 export class CreativeCornerComponent implements OnInit {
 

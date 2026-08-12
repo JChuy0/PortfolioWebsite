@@ -3,13 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { CloudFrontService } from '../_services/cloudfront.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NgFor } from '@angular/common';
 
 
 @Component({
     selector: 'app-diorama-details',
     templateUrl: './diorama-details.component.html',
     styleUrl: './diorama-details.component.css',
-    standalone: false
+    imports: [NgFor]
 })
 
 export class DioramaDetailsComponent implements OnInit {

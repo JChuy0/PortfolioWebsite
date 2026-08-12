@@ -1,12 +1,14 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ApiService } from '../_services/api.service';
+import { NgFor } from '@angular/common';
+import { ProjectCardComponent } from '../project-card/project-card.component';
 
 
 @Component({
     selector: 'app-portfolio',
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.css',
-    standalone: false
+    imports: [NgFor, ProjectCardComponent]
 })
 
 export class PortfolioComponent implements OnInit {
