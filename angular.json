@@ -25,7 +25,6 @@
           "options": {
             "outputPath": "dist/portfolio-website",
             "index": "src/index.html",
-            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -73,7 +72,10 @@
               "buildTarget": "PortfolioWebsite:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "buildTarget": "PortfolioWebsite:build"
+          }
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n",
@@ -82,21 +84,11 @@
           }
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "buildTarget": "PortfolioWebsite:build",
+            "runner": "vitest",
+            "tsConfig": "tsconfig.spec.json"
           }
         }
       }
