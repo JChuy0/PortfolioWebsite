@@ -2,44 +2,50 @@
 <div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">About</div>
 <div class="bg-slate-700 text-slate-300 mx-10 my-2 pt-1 pb-5 px-5 rounded-md">
 
-    <div class="flex mb-5 mt-1 text-slate-300 indent-8">
-        <app-about></app-about>
-    </div>
+  <div class="flex mb-5 mt-1 text-slate-300 indent-8">
+    <app-about></app-about>
+  </div>
 
-    <a class="bg-slate-400 text-slate-900 rounded-md p-2 hover:bg-slate-200" href= {{resume}} download="resume" target="_blank">
-        <button type="button">View Full Résumé</button>
-    </a>
+  <a class="bg-slate-400 text-slate-900 rounded-md p-2 hover:bg-slate-200" href= {{resume}} download="resume" target="_blank">
+    <button type="button">View Full Résumé</button>
+  </a>
 </div>
 
 <!-- Work experience component -->
 <div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Experience</div>
 <div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl">
-    <div *ngFor="let item of Jobs">
-        <app-experience [job]="item"></app-experience>
+  @for (item of Jobs; track item) {
+    <div>
+      <app-experience [job]="item"></app-experience>
     </div>
+  }
 </div>
 
 <!-- Education component -->
 <div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Education</div>
 <div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-xl">
-    <div *ngFor="let item of Schools">
-        <app-education [school]="item"></app-education>
+  @for (item of Schools; track item) {
+    <div>
+      <app-education [school]="item"></app-education>
     </div>
+  }
 </div>
 
 <!-- Certification component -->
 <div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Certifications</div>
 <div class="bg-slate-700 text-slate-300 mx-10 mt-2 mb-5 py-2 px-5 rounded-md">
-    <div *ngFor="let item of Certificates">
-        <app-certification [certificate]="item"></app-certification>
+  @for (item of Certificates; track item) {
+    <div>
+      <app-certification [certificate]="item"></app-certification>
     </div>
+  }
 </div>
 
 <div class="mt-10 mb-5 flex justify-end mr-10 ml-4 md:ml-0">
-    <p class="text-slate-600">
-        This website was loosely designed in <a class="text-slate-400 hover:bg-yellow-300 hover:text-slate-900 rounded" href="https://www.figma.com/">Figma</a>
-         and developed in <a class="text-slate-400 hover:bg-yellow-300 hover:text-slate-900 rounded" href="https://code.visualstudio.com/">Visual Studio Code</a>
-         using <a class="text-slate-400 hover:bg-yellow-300 hover:text-slate-900 rounded" href="https://angular.dev/">Angular</a>,
-         and <a class="text-slate-400 hover:bg-yellow-300 hover:text-slate-900 rounded" href="https://tailwindcss.com/">Tailwind CSS</a>.
-    </p>
+  <p class="text-slate-600">
+    This website was loosely designed in <a class="text-slate-400 hover:bg-yellow-300 hover:text-slate-900 rounded" href="https://www.figma.com/">Figma</a>
+    and developed in <a class="text-slate-400 hover:bg-yellow-300 hover:text-slate-900 rounded" href="https://code.visualstudio.com/">Visual Studio Code</a>
+    using <a class="text-slate-400 hover:bg-yellow-300 hover:text-slate-900 rounded" href="https://angular.dev/">Angular</a>,
+    and <a class="text-slate-400 hover:bg-yellow-300 hover:text-slate-900 rounded" href="https://tailwindcss.com/">Tailwind CSS</a>.
+  </p>
 </div>

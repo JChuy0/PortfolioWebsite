@@ -1,44 +1,48 @@
 <div class="custom-line-height">
 
-    <!-- Displays dioramas -->
-    <div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Dioramas</div>
+  <!-- Displays dioramas -->
+  <div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Dioramas</div>
 
-    <div class="text-slate-300 pb-4 mx-10 indent-8">
-        Here you can see progress photos, materials, and a breakdown of how I built each diorama.
-        Since they're all made for figure photography, they're designed for easy changes.
-        Props move, scenes shift – everything's modular. That way, I can quickly change things up whenever inspiration strikes.
-    </div>
+  <div class="text-slate-300 pb-4 mx-10 indent-8">
+    Here you can see progress photos, materials, and a breakdown of how I built each diorama.
+    Since they're all made for figure photography, they're designed for easy changes.
+    Props move, scenes shift – everything's modular. That way, I can quickly change things up whenever inspiration strikes.
+  </div>
 
-    <div class="flex flex-wrap justify-center gap-4">
-        <div class="" *ngFor="let item of data?.dioramas">
-            <app-diorama-card [diorama]="item"></app-diorama-card>
-        </div>
-    </div>
+  <div class="flex flex-wrap justify-center gap-4">
+    @for (item of data?.dioramas; track item) {
+      <div class="">
+        <app-diorama-card [diorama]="item"></app-diorama-card>
+      </div>
+    }
+  </div>
 
-    <br>
+  <br>
 
     <div class="font-bold text-slate-400 text-4xl py-5 ml-4 md:ml-0">Photography</div>
 
     <div class="text-slate-300 pb-4 mx-10 indent-8">
-        And here are some photos I shot with the dioramas I created.
+      And here are some photos I shot with the dioramas I created.
     </div>
 
     <div class="bg-slate-700 text-slate-300 mx-10 my-2 py-2 px-5 rounded-md items-center">
-        <!-- Displays all images -->
-        @if(reversedPhotos.length > 0) {
+      <!-- Displays all images -->
+      @if(reversedPhotos.length > 0) {
 
-            <div class="flex flex-col items-center">
-                <p class="mt-1 text-xs">
-                    (Click an image to view the full size)
-                </p>
+        <div class="flex flex-col items-center">
+          <p class="mt-1 text-xs">
+            (Click an image to view the full size)
+          </p>
 
-                <div class="flex mt-2 flex-wrap justify-center">
-                    <div *ngFor="let image of reversedPhotos">
-                        <a href={{image}} target="_blank"> <img class="md:max-w-40 max-h-40 hover:bg-slate-500 p-2 rounded-md" src={{image}} /> </a>
-                    </div>
-                </div>
-            </div>
-        }
-    
+          <div class="flex mt-2 flex-wrap justify-center">
+            @for (image of reversedPhotos; track image) {
+              <div>
+                <a href={{image}} target="_blank"> <img class="md:max-w-40 max-h-40 hover:bg-slate-500 p-2 rounded-md" src={{image}} /> </a>
+              </div>
+            }
+          </div>
+        </div>
+      }
+
     </div>
-</div>
+  </div>

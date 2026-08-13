@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ApiService } from '../_services/api.service';
-import { NgFor } from '@angular/common';
+
 import { ProjectCardComponent } from '../project-card/project-card.component';
 
 
@@ -8,7 +8,7 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
     selector: 'app-portfolio',
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.css',
-    imports: [NgFor, ProjectCardComponent]
+    imports: [ProjectCardComponent]
 })
 
 export class PortfolioComponent implements OnInit {

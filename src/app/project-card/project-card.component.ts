@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../_models/Project';
 import { Router, RouterLink } from '@angular/router';
-import { NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'app-project-card',
     templateUrl: './project-card.component.html',
     styleUrl: './project-card.component.css',
-    imports: [RouterLink, NgFor]
+    imports: [RouterLink]
 })
 
 export class ProjectCardComponent {

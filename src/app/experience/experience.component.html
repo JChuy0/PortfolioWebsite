@@ -1,12 +1,14 @@
 <div class="pl-3 pt-1 pb-1">
-    <div class="custom-line-height">
+  <div class="custom-line-height">
 
-        <div class="font-bold">{{job.jobTitle}}</div>
-        <span class="italic">{{job.companyName}} / {{job.date}}</span>
+    <div class="font-bold">{{job.jobTitle}}</div>
+    <span class="italic">{{job.companyName}} / {{job.date}}</span>
 
-        <ul class="list-disc ml-6 my-1" *ngFor="let item of job.accomplishments">
-            <li>{{item}}</li>
-        </ul>
-    </div>
+    @for (item of job.accomplishments; track item) {
+      <ul class="list-disc ml-6 my-1">
+        <li>{{item}}</li>
+      </ul>
+    }
+  </div>
 
 </div>

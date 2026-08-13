@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../_services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { NgFor } from '@angular/common';
+
 
 
 @Component({
     selector: 'app-project-details',
     templateUrl: './project-details.component.html',
     styleUrl: './project-details.component.css',
-    imports: [NgFor]
+    imports: []
 })
 
 export class ProjectDetailsComponent implements OnInit {
