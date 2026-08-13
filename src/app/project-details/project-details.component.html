@@ -29,7 +29,7 @@
   }
 
   <!-- Displays Description -->
-  <p class="custom-line-height mt-3 whitespace-break-spaces" [innerHTML]="data?.project_description"></p>
+  <p class="custom-line-height mt-3 whitespace-break-spaces" [innerHTML]="$safeNavigationMigration(data?.project_description)"></p>
 
   <button class="mt-2 py-1 px-3 bg-slate-800 rounded-md hover:bg-slate-950" type="button">
     <a href={{data?.project_repo?.html_url}} target="_blank">GitHub Link</a>

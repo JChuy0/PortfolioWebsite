@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { CloudFrontService } from '../_services/cloudfront.service';
@@ -10,6 +10,7 @@ import { DomSanitizer } from '@angular/platform-browser';
     selector: 'app-diorama-details',
     templateUrl: './diorama-details.component.html',
     styleUrl: './diorama-details.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: []
 })
 

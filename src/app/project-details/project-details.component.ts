@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ApiService } from '../_services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -9,6 +9,7 @@ import { Title } from '@angular/platform-browser';
     selector: 'app-project-details',
     templateUrl: './project-details.component.html',
     styleUrl: './project-details.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: []
 })
 

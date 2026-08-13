@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Project } from '../_models/Project';
 import { Router, RouterLink } from '@angular/router';
 
@@ -7,6 +7,7 @@ import { Router, RouterLink } from '@angular/router';
     selector: 'app-project-card',
     templateUrl: './project-card.component.html',
     styleUrl: './project-card.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [RouterLink]
 })
 

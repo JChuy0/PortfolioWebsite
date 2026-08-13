@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CloudFrontService } from '../_services/cloudfront.service';
 
 import { DioramaCardComponent } from '../diorama-card/diorama-card.component';
@@ -7,6 +7,7 @@ import { DioramaCardComponent } from '../diorama-card/diorama-card.component';
     selector: 'app-creative-corner',
     templateUrl: './creative-corner.component.html',
     styleUrl: './creative-corner.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [DioramaCardComponent]
 })
 export class CreativeCornerComponent implements OnInit {

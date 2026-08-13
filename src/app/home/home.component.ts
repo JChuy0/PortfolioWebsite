@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Job } from '../_models/Job';
 import { School } from '../_models/School';
 import { Certificate } from '../_models/Certificate';
@@ -12,6 +12,7 @@ import { CertificationComponent } from '../certification/certification.component
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [AboutComponent, ExperienceComponent, EducationComponent, CertificationComponent]
 })
 export class HomeComponent {

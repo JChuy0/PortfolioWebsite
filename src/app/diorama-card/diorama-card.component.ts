@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Diorama } from '../_models/Diorama';
 import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-diorama-card',
     templateUrl: './diorama-card.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './diorama-card.component.css'
 })
 

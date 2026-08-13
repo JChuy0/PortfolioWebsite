@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ApiService } from '../_services/api.service';
 
 import { ProjectCardComponent } from '../project-card/project-card.component';
@@ -8,6 +8,7 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
     selector: 'app-portfolio',
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [ProjectCardComponent]
 })
 

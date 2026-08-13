@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Job } from '../_models/Job';
 
 
@@ -6,6 +6,7 @@ import { Job } from '../_models/Job';
     selector: 'app-experience',
     templateUrl: './experience.component.html',
     styleUrl: './experience.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: []
 })
 export class ExperienceComponent {
