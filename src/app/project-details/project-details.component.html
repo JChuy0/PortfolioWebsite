@@ -12,7 +12,7 @@
     <!-- Displays all images for a project -->
     @if(data?.images.length > 0) {
         <div class="flex flex-col items-center">
-            <div class="flex space-x-4 mt-2">
+            <div class="flex flex-wrap items-center justify-center gap-4 mt-2">
                 <div *ngFor="let image of data?.images">
                     <a href={{image.download_url}} target="_blank"> <img class="md:max-w-80 max-h-52" src={{image.download_url}} /> </a>
                 </div>
